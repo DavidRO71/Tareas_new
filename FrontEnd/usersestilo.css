@@ -1,0 +1,77 @@
+/*.miTarjeta {
+     margin: 2px; 
+}*/
+
+body{
+    background: url(../tareas/img/fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+    
+}
+.miDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.miCard {
+    background-color: aqua;
+    
+}
+
+.naranja {
+    background-color: orange;
+}
+
+.espacio {
+    margin-bottom: 10px;
+    background: rgba(196, 84, 84, 0.4);
+    
+    /*  */
+    
+   
+    
+}
+
+#login_usu,
+#password_usu{
+    border-radius: 5px;
+    border: 1px solid gray; 
+}
+
+.btnsesion {
+    background-color: orange;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+}
+.registro {
+    background-color: orange;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* .miID{
+    font-size: 0.9em;
+    color: red;
+} */
+.row{
+    /* width: 500px; */
+    
+    
+    justify-content: center;
+    align-items: center;
+     /* box-shadow: 7px 13px 40px #000;  */
+}
+
+h1{
+    text-align: center;
+}

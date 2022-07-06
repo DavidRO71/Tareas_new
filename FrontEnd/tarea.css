@@ -1,0 +1,78 @@
+/*.miTarjeta {
+     margin: 2px; 
+}*/
+
+.miDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.miCard {
+    background-color: aqua;
+}
+
+.naranja {
+    background-color: orange;
+}
+
+.espacio {
+    margin-bottom: 10px;
+}
+
+#titulo,
+#descripcion {
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.btnAnyadir {
+    background-color: orange;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+}
+
+.miID{
+    font-size: 0.9em;
+    color: red;
+}
+----------------------------------------------
+
+
+
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+   /* width: 30%; */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 30px;
+  }
+
+.fondotarea{
+    
+    background-color: aquamarine;
+}
+
+.espacio{
+    /* width: 30%; */
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.es , .miResultado{
+    display: flex;
+    padding-left: 30px;
+}
+
+.miTarjeta{
+    padding-left: 30px;
+}
+
+.botonesTareas{
+    padding-bottom: 10px;
+}
