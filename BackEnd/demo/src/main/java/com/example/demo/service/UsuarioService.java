@@ -62,4 +62,8 @@ public class UsuarioService {
     public Usuario findByLoginAndPassword(String login, String password) {
         return usuarioRepository.findByLoginAndPassword(login, password);
     }
+
+    public Usuario findByLogin(String myLogin) {
+        return usuarioRepository.findByLogin(myLogin);
+    }
 }

@@ -8,4 +8,5 @@ import com.example.demo.entity.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     Usuario findByLoginAndPassword(String login, String password);
+    Usuario findByLogin(String login);
 }

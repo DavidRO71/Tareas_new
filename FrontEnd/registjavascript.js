@@ -29,7 +29,7 @@ function crearUsuario() {
 
         alert("Contraseñas no identicas");
     } else {
-        fetch('http://localhost:8080/createUsuario', {
+        fetch('http://localhost:5000/createUsuario', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(miUsu)

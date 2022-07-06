@@ -24,7 +24,7 @@ function inici() {
 }
 
 function recuperarCategoriaDesdeAPi() {
-  fetch("http://localhost:8080/getAllCategorias")
+  fetch("http://localhost:5000/getAllCategorias")
     .then((response) => response.json())
     .then((data) => {
       document.querySelector(".miResultado").insertAdjacentHTML("beforeend",
@@ -48,7 +48,7 @@ function recuperarCategoriaDesdeAPi() {
 }
 
 function recuperarTareasDesdeAPi() {
-  fetch("http://localhost:8080/getTareaByIDUsuario/" + idUsuario)
+  fetch("http://localhost:5000/getTareaByIDUsuario/" + idUsuario)
     .then((response) => response.json())
     .then((data) => {
       // console.log("Data: ", data);
@@ -79,7 +79,7 @@ function borrarTarea(id){
     child.remove();
     //child.parentNode.parentElement.remove();
 
-    fetch('http://localhost:8080/deleteTarea/' + id,{
+    fetch('http://localhost:5000/deleteTarea/' + id,{
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'}, 
         //body: JSON.stringify(miNota)
@@ -104,7 +104,7 @@ function crearCategoria(miCategoria) {
     return;
   }
 
-  fetch("http://localhost:8080/createCategoria", {
+  fetch("http://localhost:5000/createCategoria", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(miCategoria),
@@ -123,15 +123,14 @@ function crearCategoria(miCategoria) {
   //console.log("ëntro")
   document.querySelector(".miResultado").insertAdjacentHTML(
     "beforeend",
-    `
-        <div class="col-3 miTarjeta">
-            <div class="card ">
-                <div class="miCard">
-                    <h3 class="card-title">${miCategoria.cate_nombre}</h3>
-                    <div class="misTareas"></div>
-                </div>
+    `<div class="col-3 miTarjeta">
+        <div class="card ">
+            <div class="miCard">
+                <h3 class="card-title">${miCategoria.cate_nombre}</h3>
+                <div class="misTareas"></div>
             </div>
-        </div>`
+        </div>
+    </div>`
   );
   // <button class="agretarea">Añadir tarea</button>
   //  <button class="borratarea">Borrar tarea</button>
@@ -164,7 +163,7 @@ function guardarTarea() {
     return;
   }
 
-  fetch("http://localhost:8080/createTarea", {
+  fetch("http://localhost:5000/createTarea", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(miTarea),
@@ -233,7 +232,7 @@ function bTarea() {
 
 async function recuperarPostITDesdeAPI() {
 
-    fetch('http://localhost:8080/getAllNotes')
+    fetch('http://localhost:5000/getAllNotes')
     .then(response => response.json())
     .then(data => {
         // console.log(data),
@@ -284,7 +283,7 @@ function creaBloque(nota){
 
 
 function postData(miNota) {
-    fetch('http://localhost:8080/createNote',{
+    fetch('http://localhost:5000/createNote',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify(miNota)
@@ -308,7 +307,7 @@ function borrarPostIt(id) {
 }
 
 async function deleteAPI(id){
-    fetch('http://localhost:8080/desactivarNote/' + id,{
+    fetch('http://localhost:5000/desactivarNote/' + id,{
         method: 'PUT',
         headers: {'Content-Type': 'application/json'}, 
         //body: JSON.stringify(miNota)

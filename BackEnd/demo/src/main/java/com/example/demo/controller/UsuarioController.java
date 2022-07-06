@@ -62,4 +62,10 @@ public class UsuarioController {
 	public Usuario findByLoginAndPassword(@PathVariable("login") String login, @PathVariable("password") String password) {
 		return usuarioService.findByLoginAndPassword(login, password);
 	}
+
+	@CrossOrigin
+	@GetMapping("/findByLogin/{login}")
+	public Usuario findByLogin(@PathVariable("login") String login) {
+		return usuarioService.findByLogin(login);
+	}
 }
