@@ -120,12 +120,24 @@ function guardarTarea() {
   miTarea.usu_id = idUsuario;
 
   if (miTarea.tarea_nombre == "") {
-    alert("Debe informar la tarea antes de guardarla !");
+    //alert("Debe informar la tarea antes de guardarla !");
+    Swal.fire({
+      title: 'Parece que ha habido un error!',
+      text: 'Debe informar la tarea antes de guardarla !',
+      icon: 'error',
+      confirmButtonText: 'Pues sí !!'
+    })
     return;
   }
 
   if (miIDCategoria == 0) {
-    alert("Debe informar la categoria antes de guardarla !");
+    //alert("Debe informar la categoria antes de guardarla !");
+    Swal.fire({
+      title: 'Parece que ha habido un error!',
+      text: 'Debe informar la categoria antes de guardarla !',
+      icon: 'error',
+      confirmButtonText: 'Pues sí !!'
+    })
     return;
   }
 

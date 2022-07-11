@@ -9,7 +9,6 @@ let miUsu = { usu_id: 0, usu_login: "", usu_password: "", usu_nombre: "", usu_ap
 
 function inici() {
     document.querySelector(".btnregistro").onclick = crearUsuario;
-
 }
 
 
@@ -27,7 +26,13 @@ function crearUsuario() {
         document.querySelector("#password_usu").style.color="red";
         document.querySelector("#repassword_usu").style.color="red";
 
-        alert("Contraseñas no identicas");
+        //alert("Contraseñas no identicas");
+        Swal.fire({
+            title: 'Parece que ha habido un error!',
+            text: 'Las Contraseñas introducidas no son identicas',
+            icon: 'error',
+            confirmButtonText: 'ohhhhh'
+          })
     } else {
 
         //ENCRIPTAMOS LA CONTRASEÑA PARA GUARDARLA EN LA BASE DE DATOS
@@ -35,8 +40,8 @@ function crearUsuario() {
         let miContrasenyaEncriptada2 = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(repassword), "laClaveSecretaDeLOSaTRevidOS").toString();
         miUsu.usu_password = miContrasenyaEncriptada;
 
-        console.log("pwd: ", miContrasenyaEncriptada);
-        console.log("pwd2: ", miContrasenyaEncriptada2);
+        // console.log("pwd: ", miContrasenyaEncriptada);
+        // console.log("pwd2: ", miContrasenyaEncriptada2);
         
         fetch('http://localhost:5000/createUsuario', {
             method: 'POST',

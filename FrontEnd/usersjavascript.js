@@ -31,14 +31,26 @@ function comprobarLogin() {
                     //console.log("voy a la pagina de Javi")
                     window.location = './tarea.html';
                 } else {
-                    alert("Usuario y/o contraseña incorrecta");
+                    //alert("Usuario y/o contraseña incorrecta");
+                    Swal.fire({
+                        title: 'Parece que ha habido un error!',
+                        text: 'Usuario y/o contraseña incorrecta',
+                        icon: 'error',
+                        confirmButtonText: 'Es lo que hay !!!'
+                      })
                 }
                 //comprobarLoginYPwd(login, miContrasenyaEncriptada);
             }
         })
         .catch(error => {
             // console.log("Usuario no Registrado, ¡ Registrate !");
-            alert("El Usuario no existe, ¡ Registrate !");
+            //alert("El Usuario no existe, ¡ Registrate !");
+            Swal.fire({
+                title: 'Parece que ha habido un error!',
+                text: 'El Usuario no existe, ¡ Registrate !',
+                icon: 'error',
+                confirmButtonText: 'Es lo que hay !!!'
+              })
         }
     );
         
