@@ -29,6 +29,15 @@ function crearUsuario() {
 
         alert("Contraseñas no identicas");
     } else {
+
+        //ENCRIPTAMOS LA CONTRASEÑA PARA GUARDARLA EN LA BASE DE DATOS
+        let miContrasenyaEncriptada = CryptoJS.AES.encrypt(repassword, "laClaveSecretaDeLOSaTRevidOS").toString();
+        let miContrasenyaEncriptada2 = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(repassword), "laClaveSecretaDeLOSaTRevidOS").toString();
+        miUsu.usu_password = miContrasenyaEncriptada;
+
+        console.log("pwd: ", miContrasenyaEncriptada);
+        console.log("pwd2: ", miContrasenyaEncriptada2);
+        
         fetch('http://localhost:5000/createUsuario', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
