@@ -14,7 +14,7 @@ function comprobarLogin() {
     login = document.querySelector("#login_usu").value.trim();
     password = document.querySelector("#password_usu").value.trim();
 
-    fetch('http://localhost:5000/findByLogin/' + login)
+    fetch('http://44.194.9.34:5000/findByLogin/' + login)
         .then(response => 
             response.json()
         )
@@ -57,7 +57,7 @@ function comprobarLogin() {
 }
 
 // function comprobarLoginYPwd(login, password){
-//     fetch('http://localhost:5000/comprobarLoginPwd/' + login + "&" + password)
+//     fetch('http://44.194.9.34:5000/comprobarLoginPwd/' + login + "&" + password)
 //     .then(response => 
 //         response.json()
 //     )

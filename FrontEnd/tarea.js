@@ -31,7 +31,7 @@ function recuperarIDCategoria() {
 }
 
 function rellenarComboCategorias(){
-  fetch("http://localhost:5000/getAllCategorias")
+  fetch("http://44.194.9.34:5000/getAllCategorias")
   .then((response) => response.json())
   .then((data) => {
     for (let index = 0; index < data.length; index++) {
@@ -48,7 +48,7 @@ function rellenarComboCategorias(){
 }
 
 function recuperarCategoriaDesdeAPi() {
-  fetch("http://localhost:5000/getAllCategorias")
+  fetch("http://44.194.9.34:5000/getAllCategorias")
     .then((response) => response.json())
     .then((data) => {
       // mostrarTarea();
@@ -60,7 +60,7 @@ function recuperarCategoriaDesdeAPi() {
 }
 
 function recuperarTareasDesdeAPi() {
-  fetch("http://localhost:5000/getTareaByIDUsuario/" + idUsuario)
+  fetch("http://44.194.9.34:5000/getTareaByIDUsuario/" + idUsuario)
     .then((response) => response.json())
     .then((data) => {
       //console.log("Data: ", data);
@@ -99,7 +99,7 @@ function borrarTarea(id){
     // child.remove();
     child.parentNode.remove();
 
-    fetch('http://localhost:5000/deleteTarea/' + id,{
+    fetch('http://44.194.9.34:5000/deleteTarea/' + id,{
         method: 'DELETE',
         headers: {'Content-Type': 'application/json'}, 
         // body: JSON.stringify(miNota)
@@ -141,7 +141,7 @@ function guardarTarea() {
     return;
   }
 
-  fetch("http://localhost:5000/createTarea", {
+  fetch("http://44.194.9.34:5000/createTarea", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(miTarea),

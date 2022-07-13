@@ -43,7 +43,7 @@ function crearUsuario() {
         // console.log("pwd: ", miContrasenyaEncriptada);
         // console.log("pwd2: ", miContrasenyaEncriptada2);
         
-        fetch('http://localhost:5000/createUsuario', {
+        fetch('http://44.194.9.34:5000/createUsuario', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(miUsu)

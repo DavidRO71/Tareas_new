@@ -15,7 +15,7 @@ function inici() {
 
 async function recuperarPostITDesdeAPI() {
 
-    fetch('http://localhost:5000/getAllNotes')
+    fetch('http://44.194.9.34:5000/getAllNotes')
     .then(response => response.json())
     .then(data => {
         // console.log(data),
@@ -65,7 +65,7 @@ function addPostIt() {
 
 
 function postData(miNota) {
-    fetch('http://localhost:5000/createNote',{
+    fetch('http://44.194.9.34:5000/createNote',{
         method: 'POST',
         headers: {'Content-Type': 'application/json'}, 
         body: JSON.stringify(miNota)
@@ -89,7 +89,7 @@ function borrarPostIt(id) {
 }
 
 async function deleteAPI(id){
-    fetch('http://localhost:5000/desactivarNote/' + id,{
+    fetch('http://44.194.9.34:5000/desactivarNote/' + id,{
         method: 'PUT',
         headers: {'Content-Type': 'application/json'}, 
         //body: JSON.stringify(miNota)
